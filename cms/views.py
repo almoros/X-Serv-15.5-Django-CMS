@@ -8,7 +8,7 @@ def pagina_inicial(request):
     respuesta += " y estos son los recursos que hay:"
     lista = Pages.objects.all()
     for pagina in lista:
-        respuesta += '<br><a href="/page/' + str(pagina.id) + '">' + pagina.name + '</a>'
+        respuesta += '<br><a href="/web/' + str(pagina.id) + '">' + pagina.name + '</a>'
 
     return HttpResponse(respuesta)
 
